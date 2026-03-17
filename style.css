@@ -1,0 +1,141 @@
+<style>
+    /*
+     { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Modern vibrant gradient background 
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        padding: 20px;
+    }
+
+    .card {
+        /* Glassmorphism Effect: Transparency + Blur 
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 40px;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+
+    h2 { font-weight: 300; margin-bottom: 25px; font-size: 2rem; }
+
+    .search-box { display: flex; gap: 10px; margin-bottom: 30px; }
+
+    input {
+        flex: 1;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input::placeholder { color: rgba(255, 255, 255, 0.7); }
+    input:focus { background: rgba(255, 255, 255, 0.3); }
+
+    button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 12px;
+        background: #ffffff;
+        color: #4facfe;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s, background 0.3s;
+    }
+
+    button:hover {
+        background: #f0f0f0;
+        transform: scale(1.05);
+    }
+
+    #result { margin-top: 20px; line-height: 1.6; }
+    
+    /* Styling for the temperature display 
+    .temp { font-size: 3.5rem; font-weight: bold; margin: 10px 0; }
+    .city-name { font-size: 1.5rem; opacity: 0.9; }
+</style> */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Animated gradient background */
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: white;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px); /* The frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 24px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h2 { font-weight: 300; letter-spacing: 1px; margin-bottom: 30px; }
+
+input {
+    width: 80%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder { color: rgba(255, 255, 255, 0.5); }
+
+input:focus { border-color: #00d2ff; background: rgba(255, 255, 255, 0.2); }
+
+button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #00d2ff;
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+}
+
+/* Result Styling */
+.city-name { font-size: 1.8rem; margin-top: 25px; font-weight: 600; }
+.temp { font-size: 4rem; font-weight: 200; margin: 10px 0; }
+#result p { opacity: 0.8; font-size: 0.9rem; margin: 5px 0; }
